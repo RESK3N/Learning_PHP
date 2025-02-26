@@ -1,1 +1,1 @@
-# RESK3N
+Learning Basic PHP
