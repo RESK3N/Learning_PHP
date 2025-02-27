@@ -24,7 +24,7 @@
 echo $_GET["name"] . "<br>";
 echo $_GET["password"];
 /* The get method has no security as the url 
-will show all the information*/
+will show all the information , use _POST method instead */
 
 
 ?>
