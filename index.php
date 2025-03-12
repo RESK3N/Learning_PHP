@@ -1,7 +1,7 @@
-<?php echo "Hello World";
+<?php
+/* echo "Hello World";
 echo "<br /> Its nice to learn php <br/>";
 //This is a comment
-/* multi line comment*/
 // To declare a variable type $followed_by_variable_name
 $name = "John Doe";
 $age = 30;
@@ -16,4 +16,9 @@ $quantity = 3;
 $total = null;
 echo "You ordered {$quantity} {$item}(s) for \${$price} each. <br/>"; // to print multi variables and string
 $total = $quantity * $price;
-echo "The total cost is \${$total} <br/>";
+echo "The total cost is \${$total} <br/>"; 
+*/
+$foods = array("apple", "banana", "orange", "mango");
+foreach ($foods as $f) {
+    echo $f . "<br>";
+}
