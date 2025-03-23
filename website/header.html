@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pepperfly</h1>
+    </header>
+    <p>Live your dream vacation</p>
+    <?php 
+    session_start();
+    if(empty($_SESSION["username"])||empty($_SESSION["password"])){
+        echo "Hello Guest! Feel free to LOG IN !";
+    }else{
+        echo "Hello, " . $_SESSION["username"] . "! Welcome to Pepperfly!";
+    }
+    ?>
+    <br /><br />
+    <a href="home.php">Home</a>
+    <a href="about.php">About us</a>
+    <a href="locations.php">Locations</a>
+
+    <hr />
+  </body>
+</html>

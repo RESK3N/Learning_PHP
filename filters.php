@@ -56,6 +56,11 @@ will show all the information , use _POST method instead */
 
 //<script>alert("You have been hacked");</script>
 //some filters :- 
+//sanitize
 //FILTER_SANITIZE_SPECIAL_CHARS will filter spectial characters
-
+//FILTER_SANITIZE_NUMBER_INT will filter out numbers from any given input that has numbers
+//FILTER_SANITIZE_EMAIL will filter special characters that are not allowed in a email address
+//vaildate
+//FILTER_VALIDATE_INT will only let you enter if the input is purely integer 
+//FILTER_VALIDATE_EMAIL will only let you enter if the input is a valid email address
 ?>
