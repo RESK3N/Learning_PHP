@@ -8,6 +8,11 @@
   <body>
     <header><h1>Fakebook</h1></header>
     <span>Welcome to Fakebook</span><br />
+    <?php 
+    session_start();
+    if(empty($_SESSION["username"])){
+        echo "Hello Guest! Feel free to LOG IN !<br>"; }else{ echo "Hello, " .
+    $_SESSION["username"] . "! Welcome to Fakebook!<br />"; } ?>
     <a href="home.php">Home</a>
     <a href="about.php">About</a>
     <a href="locations.php">Locations</a>

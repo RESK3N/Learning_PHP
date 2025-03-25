@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor AI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+      #container {
+        width: 80%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #007bff;
+      }
+      #symptoms-form {
+        text-align: center;
+        margin-top: 20px;
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 12px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      select {
+        width: 80%;
+        padding: 12px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      #response {
+        margin-top: 40px;
+        text-align: center;
+      }
+      #footer {
+        margin-top: 40px;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+      }
+      .slider-container {
+        max-width: 100%;
+        overflow: hidden;
+        margin: 0 auto; /* Center the slider */
+        text-align: center; /* Center the slides */
+      }
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .slide {
+        min-width: 128px; /* Set slide width */
+        overflow: hidden;
+        margin: 0 10px; /* Add margin between slides */
+      }
+      .slide img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .info {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .info p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Doctor AI</h1>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\ai-generated-8127875_1280.png"
+              alt="Slide 1"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\doctor 1.jpeg"
+              alt="Slide 2"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\doctor.jpeg"
+              alt="Slide 3"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\ai-generated-8127875_1280.png"
+              alt="Slide 1"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\doctor 1.jpeg"
+              alt="Slide 2"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\doctor.jpeg"
+              alt="Slide 3"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\ai-generated-8127875_1280.png"
+              alt="Slide 1"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\doctor 1.jpeg"
+              alt="Slide 2"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\doctor.jpeg"
+              alt="Slide 3"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\ai-generated-8127875_1280.png"
+              alt="Slide 1"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="C:\Users\jakys\OneDrive\Desktop\doctor ai\image\doctor 1.jpeg"
+              alt="Slide 2"
+              style="width: 128px; height: 128px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <p>Welcome to Doctor AI - Your Virtual Healthcare Assistant</p>
+        <p>
+          Simply speak or type your symptoms below, select your preferred
+          language, and get a diagnosis instantly!
+        </p>
+      </div>
+      <form id="symptoms-form">
+        <input
+          type="text"
+          id="symptoms"
+          placeholder="Speak or type your symptoms"
+        />
+        <br />
+        <select id="language">
+          <option value="en">English</option>
+          <option value="bn">Bengali</option>
+          <option value="hi">Hindi</option>
+        </select>
+        <br />
+        <input type="submit" value="Get Diagnosis" />
+      </form>
+      <div id="response"></div>
+    </div>
+    <div id="footer">
+      Powered by Doctor AI &nbsp;<i class="fab fa-android"></i>
+    </div>
+
+    <script>
+      const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      recognition.lang = "en-US";
+
+      recognition.onresult = function (event) {
+        const result = event.results[0][0].transcript;
+        document.getElementById("symptoms").value = result;
+      };
+
+      document
+        .getElementById("symptoms")
+        .addEventListener("click", function () {
+          recognition.start();
+        });
+
+      document
+        .getElementById("symptoms-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var symptoms = document.getElementById("symptoms").value;
+          var language = document.getElementById("language").value;
+          var diagnosis = getDiagnosis(symptoms, language);
+          document.getElementById("response").innerHTML =
+            "<p>" + diagnosis + "</p>";
+          speak(diagnosis, language);
+        });
+
+      function getDiagnosis(symptoms, language) {
+        // Placeholder logic for diagnosis based on symptoms and language
+        // You can replace this with your actual diagnosis logic
+        symptoms = symptoms.toLowerCase();
+        if (symptoms.includes("fever") && symptoms.includes("cough")) {
+          if (language === "bn") {
+            return "আপনার প্রদত্ত লক্ষণ ভিত্তিক দেখা গেছে যে, আপনি ফ্লু আক্রান্ত হতে পারেন। যত সম্ভব বিশ্রাম নিন, পর্যাপ্ত পানি পান করুন, এবং যদি লক্ষণ অবিরত থাকে, তাহলে ডাক্তারের সাথে যোগাযোগ করুন।";
+          } else if (language === "hi") {
+            return "आपके द्वारा प्रदत्त लक্ষणों के आधार पर, यह लगता है कि आपको फ्लू हो सकता है। प्रशांति करें, पर्याप्त पानी पिएं, और यदि लक्षण स्थायी हैं या बढ़ रहे हैं, तो डॉक्टर से संपर्क करें।";
+          } else {
+            return "Based on the symptoms you provided, it seems like you might have the flu. Get plenty of rest, stay hydrated, and consider seeing a doctor if symptoms persist.";
+          }
+        } else if (
+          symptoms.includes("sore throat") &&
+          symptoms.includes("runny nose")
+        ) {
+          if (language === "bn") {
+            return "আপনার প্রদত্ত লক্ষণ ভিত্তিক দেখা গেছে যে, আপনি সাধারণ ঠাণ্ডা আক্রান্ত হতে পারেন। বিশ্রাম নিন, পানি পান করুন, এবং লক্ষণ হালকা করার জন্য বৈশিষ্ট্যযুক্ত ওটি ঔষধ পরিধান করুন।";
+          } else if (language === "hi") {
+            return "आपके द्वारा प्रदत्त लक্ষणों के आधार पर, यह लगता है कि आप साधारण सर्दी में हो सकते हैं। आराम करें, पर्याप्त पानी पिएं, और लक्षणों को हल्का करने के लिए ओवर-दी-काउंटर दवाओं का विचार करें।";
+          } else {
+            return "Based on the symptoms you provided, it seems like you might have a common cold. Rest, drink fluids, and consider over-the-counter medications for symptom relief.";
+          }
+        } else {
+          if (language === "bn") {
+            return "প্রদত্ত লক্ষণ নিয়ে ভিত্তিক বিশ্লেষণের আলোকে, মুশকে নিয়ে সঠিক রোগ সনাক্ত করা অত্যন্ত কঠিন। দয়া করে একজন স্বাস্থ্য পেশাদারের সাথে যোগাযোগ করুন এবং প্রয়োজনে উচিত বিশেষজ্ঞের পরামর্শ নিন।";
+          } else if (language === "hi") {
+            return "आपके द्वारा प्रदत्त लक্ষणों के आधार पर, यह सही बीमारी का निर्धारण करना अत्यंत कठिन है। कृपया एक स्वास्थ्य पेशेवर से संपर्क करें और आवश्यक होने पर विशेषज्ञ का सलाह लें।";
+          } else {
+            return "Based on the symptoms you provided, it's difficult to determine the exact illness. Please consult a healthcare professional for a proper diagnosis.";
+          }
+        }
+      }
+
+      function speak(text, language) {
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance(text);
+        if (language === "bn") {
+          utterance.lang = "bn-IN";
+        } else if (language === "hi") {
+          utterance.lang = "hi-IN";
+        } else {
+          utterance.lang = "en-US";
+        }
+        synth.speak(utterance);
+      }
+    </script>
+  </body>
+</html>

@@ -41,8 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             if (mysqli_query($conn, $sql)) {
                 echo "You are now registered";
+                $_SESSION["username"] = $username;
             }
-        } catch (mysqli_sql_exception) {
+        } catch (mysqli_sql_exception $e) {
             echo "That username is taken! Please try another one!";
         }
     }
