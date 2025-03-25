@@ -14,4 +14,5 @@ include 'db.php';
     </select>
     <button type="submit">Start</button>
 </form>
+
 <?php include 'footer.php'; ?>
