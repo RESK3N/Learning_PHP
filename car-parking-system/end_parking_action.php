@@ -13,3 +13,4 @@ $query = "
 ";
 $conn->query($query);
 header("Location: dashboard.php");
+.
